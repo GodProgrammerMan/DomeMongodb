@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.表现层", "2.表现层", "{10994C2B-CB87-4060-8C85-954899CE376D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.接口层", "3.接口层", "{4010B670-C7E3-4635-B30F-312AA772A633}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.公共层Publice", "4.公共层Publice", "{A5F4343B-6E35-4318-A1A2-00EB6A6042AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.DLL", "1.DLL", "{4A94FEC1-654D-45A2-9B36-D0068B001EF0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\ADODB.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\ADODB.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Aspose.Words.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Aspose.Words.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\AutoMapper.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\AutoMapper.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\AutoMapper.xml = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\AutoMapper.xml
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.dll.config = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.dll.config
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.pdb = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\DotNet.Utilities.pdb
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Excel.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Excel.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\ICSharpCode.SharpZipLib.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\ICSharpCode.SharpZipLib.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\itextsharp.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\itextsharp.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Office.Interop.Owc11.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Office.Interop.Owc11.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Vbe.Interop.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Vbe.Interop.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\mscomctl.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\mscomctl.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MSDATASRC.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MSDATASRC.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MySql.Data.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MySql.Data.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Newtonsoft.Json.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Newtonsoft.Json.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Newtonsoft.Json.xml = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Newtonsoft.Json.xml
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\NPOI.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\NPOI.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\office.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\office.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Oracle.ManagedDataAccess.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Oracle.ManagedDataAccess.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\OWC10Chart.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\OWC10Chart.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Owin.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Owin.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\SqlSugar.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\SqlSugar.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\SqlSugar.pdb = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\SqlSugar.pdb
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\stdole.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\stdole.dll
+		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\System.Data.SQLite.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\System.Data.SQLite.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "3.接口层\WebApi\WebApi.csproj", "{30BA5BB9-DA5D-490B-A800-B9B057C83453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Utilities", "4.公共层Publice\DotNet.Utilities\DotNet.Utilities.csproj", "{37B9B916-D30C-43BA-BC2D-BB96F759C93F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeWeb", "2.表现层\DomeWeb\DomeWeb.csproj", "{1251976B-DA53-492C-825E-AB449506850D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30BA5BB9-DA5D-490B-A800-B9B057C83453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BA5BB9-DA5D-490B-A800-B9B057C83453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BA5BB9-DA5D-490B-A800-B9B057C83453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BA5BB9-DA5D-490B-A800-B9B057C83453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B9B916-D30C-43BA-BC2D-BB96F759C93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B9B916-D30C-43BA-BC2D-BB96F759C93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B9B916-D30C-43BA-BC2D-BB96F759C93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B9B916-D30C-43BA-BC2D-BB96F759C93F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1251976B-DA53-492C-825E-AB449506850D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1251976B-DA53-492C-825E-AB449506850D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1251976B-DA53-492C-825E-AB449506850D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1251976B-DA53-492C-825E-AB449506850D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30BA5BB9-DA5D-490B-A800-B9B057C83453} = {4010B670-C7E3-4635-B30F-312AA772A633}
+		{37B9B916-D30C-43BA-BC2D-BB96F759C93F} = {A5F4343B-6E35-4318-A1A2-00EB6A6042AC}
+		{1251976B-DA53-492C-825E-AB449506850D} = {10994C2B-CB87-4060-8C85-954899CE376D}
+	EndGlobalSection
+EndGlobal
