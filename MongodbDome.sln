@@ -23,6 +23,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.DLL", "1.DLL", "{4A94FEC1
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\itextsharp.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\itextsharp.dll
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Office.Interop.Owc11.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Office.Interop.Owc11.dll
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Vbe.Interop.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\Microsoft.Vbe.Interop.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Bson.dll = E:\MongoDB\netstandard1.5\MongoDB.Bson.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Bson.pdb = E:\MongoDB\netstandard1.5\MongoDB.Bson.pdb
+		E:\MongoDB\netstandard1.5\MongoDB.Bson.xml = E:\MongoDB\netstandard1.5\MongoDB.Bson.xml
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.dll = E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.pdb = E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.pdb
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.xml = E:\MongoDB\netstandard1.5\MongoDB.Driver.Core.xml
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.dll = E:\MongoDB\netstandard1.5\MongoDB.Driver.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.dll = E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.pdb = E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.pdb
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.xml = E:\MongoDB\netstandard1.5\MongoDB.Driver.GridFS.xml
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.dll = E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.dll
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.pdb = E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.pdb
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.xml = E:\MongoDB\netstandard1.5\MongoDB.Driver.Legacy.xml
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.pdb = E:\MongoDB\netstandard1.5\MongoDB.Driver.pdb
+		E:\MongoDB\netstandard1.5\MongoDB.Driver.xml = E:\MongoDB\netstandard1.5\MongoDB.Driver.xml
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\mscomctl.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\mscomctl.dll
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MSDATASRC.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MSDATASRC.dll
 		..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MySql.Data.dll = ..\..\..\..\梁泽祥工作文件\Blog校园博客系统\DLL\MySql.Data.dll
@@ -45,6 +60,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Utilities", "4.公�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeWeb", "2.表现层\DomeWeb\DomeWeb.csproj", "{1251976B-DA53-492C-825E-AB449506850D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.数据库DB", "5.数据库DB", "{96E1029D-BDAF-466C-A30A-534F68E2C244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.实体层Model", "6.实体层Model", "{FB326566-BBAE-4B30-95EC-1E183C657996}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.数据服务层", "7.数据服务层", "{59F3B8AE-3C96-4E9F-9692-9C438D620E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Molde", "6.实体层Model\MongoDB.Molde\MongoDB.Molde.csproj", "{985AAA5C-29A2-4726-8284-83B2E51D11C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbHelp", "5.数据库DB\MongoDbHepler\MongoDbHelp.csproj", "{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoService", "7.数据服务层\MongoService\MongoService.csproj", "{D62EEA51-C4FF-4F2C-A471-68DB53304462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.DTO", "6.实体层Model\MongoDB.DTO\MongoDB.DTO.csproj", "{B531FE1D-16C4-4DAE-B729-9DACBA5635F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +92,22 @@ Global
 		{1251976B-DA53-492C-825E-AB449506850D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1251976B-DA53-492C-825E-AB449506850D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1251976B-DA53-492C-825E-AB449506850D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985AAA5C-29A2-4726-8284-83B2E51D11C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985AAA5C-29A2-4726-8284-83B2E51D11C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985AAA5C-29A2-4726-8284-83B2E51D11C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985AAA5C-29A2-4726-8284-83B2E51D11C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D62EEA51-C4FF-4F2C-A471-68DB53304462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62EEA51-C4FF-4F2C-A471-68DB53304462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62EEA51-C4FF-4F2C-A471-68DB53304462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62EEA51-C4FF-4F2C-A471-68DB53304462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B531FE1D-16C4-4DAE-B729-9DACBA5635F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B531FE1D-16C4-4DAE-B729-9DACBA5635F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B531FE1D-16C4-4DAE-B729-9DACBA5635F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B531FE1D-16C4-4DAE-B729-9DACBA5635F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +116,9 @@ Global
 		{30BA5BB9-DA5D-490B-A800-B9B057C83453} = {4010B670-C7E3-4635-B30F-312AA772A633}
 		{37B9B916-D30C-43BA-BC2D-BB96F759C93F} = {A5F4343B-6E35-4318-A1A2-00EB6A6042AC}
 		{1251976B-DA53-492C-825E-AB449506850D} = {10994C2B-CB87-4060-8C85-954899CE376D}
+		{985AAA5C-29A2-4726-8284-83B2E51D11C9} = {FB326566-BBAE-4B30-95EC-1E183C657996}
+		{CAFF99F4-F296-45D2-A4D7-A74BF22D2BAD} = {96E1029D-BDAF-466C-A30A-534F68E2C244}
+		{D62EEA51-C4FF-4F2C-A471-68DB53304462} = {59F3B8AE-3C96-4E9F-9692-9C438D620E69}
+		{B531FE1D-16C4-4DAE-B729-9DACBA5635F8} = {FB326566-BBAE-4B30-95EC-1E183C657996}
 	EndGlobalSection
 EndGlobal
