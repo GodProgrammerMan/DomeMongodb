@@ -5,8 +5,9 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Net.Http.Formatting;
 
-namespace WebApi
+namespace WebAPI
 {
     public static class WebApiConfig
     {
@@ -17,6 +18,10 @@ namespace WebApi
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+            GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+            //默认返回 json  
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(
+                new QueryStringMapping("datatype", "json", "application/json"));
             // Web API 路由
             config.MapHttpAttributeRoutes();
 

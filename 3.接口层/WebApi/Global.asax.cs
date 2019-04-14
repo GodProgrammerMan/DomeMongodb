@@ -6,8 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using WebAPI.App_Start;
 
-namespace WebApi
+namespace WebAPI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
@@ -18,6 +19,7 @@ namespace WebApi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            MapperConfig.CreateMap();   //初始化 Mapper
         }
     }
 }

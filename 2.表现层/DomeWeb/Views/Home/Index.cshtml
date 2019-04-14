@@ -1,31 +1,32 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "新闻首页 - MongoDB Dome";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<article class="art-list hidden" style="display:block !important" id="NewList"></article>
+@section scripts{
+    <script>
+        $(function () {
+            $.get("http://mongodb.api.com/api/New/GetNesList", { pageIndex: 1, pageSize: 20, kw: "" }, function (data, status) {
+                if (data.ret == 0 && data.Success == true) {
+                    var htmls = '';
+                    $.each(data.Content, function (i, item) {
+                        var time = new Date(item.ReleaseDate);
+                        var times = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate();
+                        if (item.NewType == "头条") {
+                            htmls += '<section class="focus-tit"><h3 class="tit"><i></i><a href="/home/info?id=' + item.Id + '">' + item.Title + '</a></h3></section>';
+                        } else if (item.NewType == "推荐") {
+                            htmls += '<section class="art-tj2" style="display:block !important"><i></i><a href="/home/info?id=' + item.Id + '"><img src="' + item.Logo + '" width="90" height="60">' + item.Title + '</a></section>';
+                        } else {
+                            htmls += '<section class="art-box"><div class="bd"><a href="/home/info?id=' + item.Id + '" class="btn">' + item.NewType + '</a><a href="/home/info?id=' + item.Id + '" class="box"><img src="' + item.Logo + '"><h2 likeid="795400" typeid="html"><span>' + item.Title + '</span></h2><p style="overflow: hidden;text-overflow:ellipsis;white-space:nowrap;">' + item.Content + '</p></a></div><div class="ft"><span class="fl">' + times + '</span><a href="javascript:void(0);" class="fr"><em></em><span></span></a></div></section>';
+                        }
+                    });
+                    $("#NewList").html(htmls);
+                } else {
+                    alert("无数据");
+                }
+            });
+        })
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    </script>
+}

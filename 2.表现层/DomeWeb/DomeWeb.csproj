@@ -182,6 +182,29 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\channel\mobile\loading.png" />
+    <Content Include="Content\Images\channel\mobile\logo_auto.png" />
+    <Content Include="Content\Images\channel\mobile\logo_culture.png" />
+    <Content Include="Content\Images\channel\mobile\logo_depth.png" />
+    <Content Include="Content\Images\channel\mobile\logo_ent.png" />
+    <Content Include="Content\Images\channel\mobile\logo_finance.png" />
+    <Content Include="Content\Images\channel\mobile\logo_media.png" />
+    <Content Include="Content\Images\channel\mobile\logo_ndgd.png" />
+    <Content Include="Content\Images\channel\mobile\logo_ndgongyi.png" />
+    <Content Include="Content\Images\channel\mobile\logo_ndphotos.png" />
+    <Content Include="Content\Images\channel\mobile\logo_ndvideo.png" />
+    <Content Include="Content\Images\channel\mobile\logo_news.png" />
+    <Content Include="Content\Images\channel\mobile\logo_nis.png" />
+    <Content Include="Content\Images\channel\mobile\logo_opinion.png" />
+    <Content Include="Content\Images\channel\mobile\logo_other.png" />
+    <Content Include="Content\Images\channel\mobile\logo_politics.png" />
+    <Content Include="Content\Images\channel\mobile\logo_society.png" />
+    <Content Include="Content\Images\channel\mobile\logo_sports.png" />
+    <Content Include="Content\Images\channel\mobile\logo_tech.png" />
+    <Content Include="Content\Images\channel\mobile\logo_travel.png" />
+    <Content Include="Content\Images\channel\mobile\logo_world.png" />
+    <Content Include="Content\Images\channel\transparent_bg.png" />
+    <Content Include="Content\mobile.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,8 +234,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -234,6 +255,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

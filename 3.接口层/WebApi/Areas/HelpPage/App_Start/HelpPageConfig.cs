@@ -16,7 +16,7 @@ using System.Web.Http;
 using System.Web.Http.OData;
 #endif
 
-namespace WebApi.Areas.HelpPage
+namespace WebAPI.Areas.HelpPage
 {
     /// <summary>
     /// Use this class to customize the Help Page.
@@ -26,7 +26,7 @@ namespace WebApi.Areas.HelpPage
     public static class HelpPageConfig
     {
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "WebApi.Areas.HelpPage.TextSample.#ctor(System.String)",
+            MessageId = "WebAPI.Areas.HelpPage.TextSample.#ctor(System.String)",
             Justification = "End users may choose to merge this string with existing localized resources.")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly",
             MessageId = "bsonspec",
@@ -58,6 +58,8 @@ namespace WebApi.Areas.HelpPage
             config.SetSampleForMediaType(
                 new TextSample("Binary JSON content. See http://bsonspec.org for details."),
                 new MediaTypeHeaderValue("application/bson"));
+
+            config.SetDocumentationProvider(new XmlDocumentationProvider(HttpContext.Current.Server.MapPath("/bin/WebAPI.XML")));
 
             //// Uncomment the following to use "[0]=foo&[1]=bar" directly as the sample for all actions that support form URL encoded format
             //// and have IEnumerable<string> as the body parameter or return type.

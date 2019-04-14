@@ -2,12 +2,11 @@
 @using System.Web.Http.Controllers
 @using System.Web.Http.Description
 @using System.Collections.ObjectModel
-@using WebApi.Areas.HelpPage.Models
+@using WebAPI 
 @model Collection<ApiDescription>
 
 @{
-    ViewBag.Title = "ASP.NET Web API Help Page";
-
+    ViewBag.Title = " API文档说明"; 
     // Group APIs by controller
     ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
 }
@@ -23,16 +22,20 @@
 <div id="body" class="help-page">
     <section class="featured">
         <div class="content-wrapper">
-            <h2>Introduction</h2>
+            <h2>说明</h2>
             <p>
-                Provide a general description of your APIs here.
+                在这里提供的api的描述。
             </p>
         </div>
     </section>
     <section class="content-wrapper main-content clear-fix">
         @foreach (var group in apiGroups)
-        {
-            @Html.DisplayFor(m => group, "ApiGroup")
+        { 
+            //if (group.Key.ControllerType.Namespace == "WebAPI.Controllers")
+            //{
+                @Html.DisplayFor(m => group, "ApiGroup")
+            @*}*@
+
         }
     </section>
 </div>

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "新闻首页 - MongoDB Dome";
+}
+
+<article class="article hidden" style="display: block;" id="newsMolde"></article>
+
+@section scripts{
+    <script>
+        $(function () {
+            $.get("http://mongodb.api.com/api/New/GetNewInfo", { id: '@(Request.QueryString["id"])' }, function (data, status) {
+                if (data.ret == 0 && data.Success == true) {
+                    var htmls = '';
+                    var item = data.Content
+                    var time = new Date(item.ReleaseDate);
+                    var times = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate();
+                    htmls = '<div class="head clearfix">' +
+                    '<h1 class="title" likeid="800010">' + item.Title + '</h1>' +
+                    '<h2><span class="time">' + times + '</span> 来源:<span class="source">' + item.Source + '</span> 作者:<span class="source">' + item.Author + '</span></h2>' +
+                    '</div>' +
+                    '<div class="text clearfix">' +
+                    '<div class="text1" style=""><p style="text-align:center;"><img src="' + item.Logo + '"><br></p><p> ' + item.Content + '</p></div>' +
+                                '</div>' +
+                                '<div class="btn-share clearfix"><a class="bsh-mobile-btn bmstyle-button" href="javascript:void(0);">分享</a><a href="javascript:void(0);" title="顶一个" class="ding bg1"></a></div>';
+                    $("#newsMolde").html(htmls);
+                } else {
+                    alert("无数据");
+                }
+            });
+        })
+
+    </script>
+}

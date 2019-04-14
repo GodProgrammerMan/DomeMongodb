@@ -4,40 +4,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
-        </footer>
-    </div>
-
+<body class="homebody" compiled="compiled">
+    <header id="header">
+        <div class="top-home"><div class="logo"><a id="return" href="">&nbsp;</a></div><div class="nav-btn"><span href="javascript:void(0)" class="more"></span></div><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=index&amp;xml=&amp;listRows=32&amp;speed=1" class="sel-btn">精简版</a><img class="login-stuts" src="../../pics.oeeee.com/nd_avatar/noavatar_small.gif"><a href="javascript:;" class="sel-btn login-pop">登录</a></div><div id="nav" class="nd-nav"><ul class="first"><li class="menu1"><a href="m.php@m=m&amp;speed=">首页</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=news&amp;xml=1&amp;speed=">新闻</a></li><li class="menu3"><a href="m.php@m=m&amp;a=mweibo&amp;channel=weibo&amp;speed=">热评</a></li><li class="menu4"><a href="m.php@m=m&amp;a=mlike&amp;channel=like&amp;speed=">热顶</a></li><li class="menu5"><a style="color:#D00000;" target="_blank" href="../../3g.weicai.com/nandu/default.htm">彩票</a></li><li class="menu6"><a href="m.php@m=m&amp;channel=roll&amp;a=mroll&amp;speed=">滚动</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=politics&amp;xml=1&amp;speed=">时局</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=world&amp;xml=1&amp;speed=">国际</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=society&amp;xml=1&amp;speed=">社会</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=opinion&amp;xml=1&amp;speed=">评论</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=depth&amp;xml=1&amp;speed=">深度</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=media&amp;xml=1&amp;speed=">传媒</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=gd&amp;xml=1&amp;speed=">广东</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=ent&amp;xml=1&amp;speed=">娱乐</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=sports&amp;xml=1&amp;speed=">体育</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=ndgongyi&amp;xml=1&amp;speed=">公益</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=culture&amp;xml=1&amp;speed=">文化</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=tech&amp;xml=1&amp;speed=">科技</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=finance&amp;xml=1&amp;speed=">财经</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=auto&amp;xml=1&amp;speed=">汽车</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=travel&amp;xml=1&amp;speed=">旅游</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=house&amp;xml=1&amp;speed=">房产</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=life&amp;xml=1&amp;speed=">消费</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=photo&amp;xml=1&amp;speed=">图片</a></li></ul></div>
+    </header>
+    <nav id="menu" class="nd-nav"><ul class="n-index"><li class="menu1"><a href="m.php@m=m&amp;speed=">首页</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=news&amp;xml=1&amp;speed=">新闻</a></li><li class="menu3"><a href="m.php@m=m&amp;a=mweibo&amp;channel=weibo&amp;speed=">热评</a></li><li class="menu4"><a href="m.php@m=m&amp;a=mlike&amp;channel=like&amp;speed=">热顶</a></li><li class="menu5"><a style="color:#D00000;" target="_blank" href="../../3g.weicai.com/nandu/default.htm">彩票</a></li><li class="menu6"><a href="m.php@m=m&amp;a=mroll&amp;channel=roll&amp;speed=">滚动</a></li></ul></nav>
+    <nav id="menu2" style="display:block" class="nd-nav"><ul class="first"><li class="menu1"><a href="m.php@m=m&amp;speed=">首页</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=news&amp;xml=1&amp;speed=">新闻</a></li><li class="menu3"><a href="m.php@m=m&amp;a=mweibo&amp;channel=weibo&amp;speed=">热评</a></li><li class="menu4"><a href="m.php@m=m&amp;a=mlike&amp;channel=like&amp;speed=">热顶</a></li><li class="menu5"><a style="color:#D00000;" target="_blank" href="../../3g.weicai.com/nandu/default.htm">彩票</a></li><li class="menu6"><a href="m.php@m=m&amp;channel=roll&amp;a=mroll&amp;speed=">滚动</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=politics&amp;xml=1&amp;speed=">时局</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=world&amp;xml=1&amp;speed=">国际</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=society&amp;xml=1&amp;speed=">社会</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=opinion&amp;xml=1&amp;speed=">评论</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=depth&amp;xml=1&amp;speed=">深度</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=media&amp;xml=1&amp;speed=">传媒</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=gd&amp;xml=1&amp;speed=">广东</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=ent&amp;xml=1&amp;speed=">娱乐</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=sports&amp;xml=1&amp;speed=">体育</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=ndgongyi&amp;xml=1&amp;speed=">公益</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=culture&amp;xml=1&amp;speed=">文化</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=tech&amp;xml=1&amp;speed=">科技</a></li></ul><ul><li class="menu1"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=finance&amp;xml=1&amp;speed=">财经</a></li><li class="menu2"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=auto&amp;xml=1&amp;speed=">汽车</a></li><li class="menu3"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=travel&amp;xml=1&amp;speed=">旅游</a></li><li class="menu4"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=house&amp;xml=1&amp;speed=">房产</a></li><li class="menu5"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=life&amp;xml=1&amp;speed=">消费</a></li><li class="menu6"><a href="m.php@m=m&amp;a=index&amp;app=2&amp;channel=photo&amp;xml=1&amp;speed=">图片</a></li></ul></nav>
+    <div id="lognlayer" style="display:none"><a class="pop-close" style="default.htm">X</a><div class="content"><div class="login-msg" style="display: none; "><p class="error">请输入您的账户名和密码</p></div><div class="r"><div class="iput dl"><input id="email" name="email" type="text" value=""><span class="ph-label" style="">邮箱</span></div><div class="iput pass"><input id="password" name="password" type="password" value=""><span class="ph-label" style="">密码</span></div><div class="subbut"><a class="but" href="javascript:void(0);" id="post_login">登录</a><a class="but" href="../../user.nandu.com/passport/index.php@m=user&amp;a=goto_oauth2&amp;type=sina" id="sina_login">新浪微博登录</a><a class="but" href="../../user.nandu.com/passport/index.php@m=user&amp;a=goto_oauth2&amp;type=qq" id="qq_login">QQ账号登录</a></div></div><div class="clear"></div></div></div>
+    <div id="shade"></div>
+    @RenderBody()
+    <div class="ad-bot-txt" id="botWordAd"><a class="txt-left" href="../../mtthome.3g.qq.com/sd/d@action=index&amp;channel_id=20149" target="_blank">手机QQ浏览器</a><a class="txt-right" href="../help/help.html">手机版帮助</a></div>
+    <div class="ad-bot">
+    <script type="text/javascript" src="../../oeeee.adsame.com/s@z=oeeee&amp;c=1263"></script></div>
+    <footer id="footer"><span class="fot_box"><a href="javascript:history.back(-1);" class="goback"></a></span><div class="copyright">&copy; @DateTime.Now.Year - MongoDB By LZX</div><span class="fot_box1"><a href="javascript:void(0);" class="gotop"></a></span><span class="fot_box1" style=" display:none"><a href="../help/help.html" class="question"></a></span></footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

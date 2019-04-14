@@ -10,11 +10,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using System.Web.Http.Description;
-using WebApi.Areas.HelpPage.ModelDescriptions;
-using WebApi.Areas.HelpPage.Models;
+using System.Web.Http.Description; 
+using WebAPI ;
 
-namespace WebApi.Areas.HelpPage
+namespace WebAPI 
 {
     public static class HelpPageConfigurationExtensions
     {
@@ -203,9 +202,14 @@ namespace WebApi.Areas.HelpPage
         /// <returns>The <see cref="ModelDescriptionGenerator"/></returns>
         public static ModelDescriptionGenerator GetModelDescriptionGenerator(this HttpConfiguration config)
         {
-            return (ModelDescriptionGenerator)config.Properties.GetOrAdd(
+            var values = (ModelDescriptionGenerator)config.Properties.GetOrAdd(
                 typeof(ModelDescriptionGenerator),
                 k => InitializeModelDescriptionGenerator(config));
+
+            //var v = (WebAPI.ComplexTypeModelDescription)values.GeneratedModels["CH_UsersDTO"];
+            //v.Properties[0].Documentation = "aaaa";
+         
+            return values;
         }
 
         /// <summary>
@@ -444,7 +448,7 @@ namespace WebApi.Areas.HelpPage
             ModelDescriptionGenerator modelGenerator = new ModelDescriptionGenerator(config);
             Collection<ApiDescription> apis = config.Services.GetApiExplorer().ApiDescriptions;
             foreach (ApiDescription api in apis)
-            {
+            { 
                 ApiParameterDescription parameterDescription;
                 Type parameterType;
                 if (TryGetResourceParameter(api, config, out parameterDescription, out parameterType))

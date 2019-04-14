@@ -1,11 +1,10 @@
-﻿
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Builders;
 using MongoDB.Molde;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,20 +13,7 @@ namespace MongoDbHelp
 {
     public static class MongoDbHelper
     {
-        /// <summary> 
-        /// 获取数据库实例对象
-        /// </summary>
-        /// <param name="connectionString">数据库连接串</param>
-        /// <param name="dbName">数据库名称</param>
-        /// <returns>数据库实例对象</returns>
-        private static MongoDatabase GetDatabase(string connectionString, string dbName)
-        {
 
-            MongoClient client = new MongoClient(connectionString);
-            var server = client.GetServer();
-            return server.GetDatabase(dbName);
-
-        }
         /// <summary>
         /// 获取数据库实例接口对象
         /// </summary>
@@ -85,35 +71,6 @@ models) where T : EntityBase
         }
         #endregion
 
-        #region 更新
-        /// <summary>
-        /// 更新数据
-        /// </summary>
-        /// <param name="connectionString">数据库连接串</param>
-        /// <param name="dbName">数据库名称</param>
-        /// <param name="collectionName">集合名称</param>
-        /// <param name="query">查询条件</param>
-        /// <param name="dictUpdate">更新字段</param>
-        public static void Update<T>(string connectionString, string dbName, string collectionName,
-
-IMongoQuery query, Dictionary<string, BsonValue> dictUpdate) where T : EntityBase
-        {
-            var db = GetDatabase(connectionString, dbName);
-            var collection = db.GetCollection(collectionName);
-            var update = new UpdateBuilder();
-            if (dictUpdate != null && dictUpdate.Count > 0)
-            {
-                foreach (var item in dictUpdate)
-                {
-                    update.Set(item.Key, item.Value);
-                }
-            }
-            var d = collection.Update(query, update, UpdateFlags.Multi);
-
-        }
-
-        #endregion
-
         #region 查询
 
         /// <summary>
@@ -130,9 +87,10 @@ IMongoQuery query, Dictionary<string, BsonValue> dictUpdate) where T : EntityBas
 id)
            where T : EntityBase
         {
-            var db = GetDatabase(connectionString, dbName);
+            var db = GetIDatabase(connectionString, dbName);
             var collection = db.GetCollection<T>(collectionName);
-            return collection.FindOneById(id);
+
+            return collection.AsQueryable<T>().Where(item => item.Id == id).First();
         }
 
         /// <summary>
@@ -146,12 +104,11 @@ id)
         /// <returns>数据对象</returns>
         public static T GetOneByCondition<T>(string connectionString, string dbName, string
 
-collectionName, IMongoQuery query)
-           where T : EntityBase
+collectionName, FilterDefinition<T> filter)
         {
-            var db = GetDatabase(connectionString, dbName);
+            var db = GetIDatabase(connectionString, dbName);
             var collection = db.GetCollection<T>(collectionName);
-            return collection.FindOne(query);
+            return collection.Find(filter).First();
         }
 
         /// <summary>
@@ -165,12 +122,12 @@ collectionName, IMongoQuery query)
         /// <returns>数据对象集合</returns>
         public static List<T> GetManyByCondition<T>(string connectionString, string dbName, string
 
-collectionName, IMongoQuery query)
+collectionName, FilterDefinition<T> filter)
             where T : EntityBase
         {
-            var db = GetDatabase(connectionString, dbName);
+            var db = GetIDatabase(connectionString, dbName);
             var collection = db.GetCollection<T>(collectionName);
-            return collection.Find(query).ToList();
+            return collection.Find(filter).ToList();
         }
 
         /// <summary>
@@ -184,9 +141,9 @@ collectionName, IMongoQuery query)
         public static List<T> GetAll<T>(string connectionString, string dbName, string collectionName)
              where T : EntityBase
         {
-            var db = GetDatabase(connectionString, dbName);
+            var db = GetIDatabase(connectionString, dbName);
             var collection = db.GetCollection<T>(collectionName);
-            return collection.FindAll().ToList();
+            return collection.AsQueryable().ToList();
         }
 
         /// <summary>
@@ -199,12 +156,15 @@ collectionName, IMongoQuery query)
         /// <param name="pageIndex">当前页</param>
         /// <param name="pageSize">页面大小</param>
         /// <returns>数据对象集合</returns>
-        public static List<T> GetListToPage<T>(string connectionString, string dbName, string collectionName,int pageIndex,int pageSize)
-             where T : EntityBase
+        public static List<T> GetListToPage<T>(string connectionString, string dbName, string collectionName,int pageIndex,int pageSize, Expression<Func<T, bool>> predicate)
         {
-            var db = GetDatabase(connectionString, dbName);
+            var db = GetIDatabase(connectionString, dbName);
             var collection = db.GetCollection<T>(collectionName);
-            return collection.FindAll().SetSkip(pageIndex).SetLimit(pageSize).ToList();
+            if (predicate == null) 
+                return collection.AsQueryable().ToList();
+            else
+                return collection.AsQueryable().Where(predicate).Skip(pageIndex * pageSize).Take(pageSize).ToList();
+
         }
         #endregion
 
@@ -217,13 +177,12 @@ collectionName, IMongoQuery query)
         /// <param name="dbName">数据库名称</param>
         /// <param name="collectionName">集合名称</param>
         /// <param name="query">查询条件</param>
-        public static void DeleteByCondition(string connectionString, string dbName, string
-
-collectionName, IMongoQuery query)
+        public static long DeleteByCondition<T>(string connectionString, string dbName, string
+collectionName, FilterDefinition<T> filter)
         {
-            var db = GetDatabase(connectionString, dbName);
-            var collection = db.GetCollection(collectionName);
-            collection.Remove(query);
+            var db = GetIDatabase(connectionString, dbName);
+            var collection = db.GetCollection<T>(collectionName);
+            return collection.DeleteMany(filter).DeletedCount;
         }
 
         /// <summary>
@@ -232,11 +191,11 @@ collectionName, IMongoQuery query)
         /// <param name="connectionString">数据库连接串</param>
         /// <param name="dbName">数据库名称</param>
         /// <param name="collectionName">集合名称</param>
-        public static void DeleteAll(string connectionString, string dbName, string collectionName)
+        public static long DeleteAll<T>(string connectionString, string dbName, string collectionName)
         {
-            var db = GetDatabase(connectionString, dbName);
-            var collection = db.GetCollection(collectionName);
-            collection.RemoveAll();
+            var db = GetIDatabase(connectionString, dbName);
+            var collection = db.GetCollection<T>(collectionName);
+            return collection.DeleteMany(null).DeletedCount;
         }
 
         #endregion

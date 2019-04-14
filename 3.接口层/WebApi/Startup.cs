@@ -4,14 +4,14 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(WebApi.Startup))]
+[assembly: OwinStartup(typeof(WebAPI.Startup))]
 
-namespace WebApi
+namespace WebAPI
 {
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
-        {     
+        {
             ConfigureAuth(app);
         }
     }

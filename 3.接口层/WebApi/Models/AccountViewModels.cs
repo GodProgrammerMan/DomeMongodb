@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WebApi.Models
+namespace WebAPI.Models
 {
     // AccountController 操作返回的模型。
 

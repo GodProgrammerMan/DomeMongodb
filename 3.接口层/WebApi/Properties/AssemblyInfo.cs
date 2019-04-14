@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息是通过以下项进行控制的
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("WebApi")]
+[assembly: AssemblyTitle("WebAPI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("WebApi")]
-[assembly: AssemblyCopyright("版权所有(C) Microsoft 2019")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("WebAPI")]
+[assembly: AssemblyCopyright("版权所有(C)  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
-[assembly: Guid("0a3e6352-9207-4620-a3a3-ab3e44ac36d5")]
+[assembly: Guid("29db048f-3e58-456a-843f-bd61f6d08ce1")]
 
 // 程序集的版本信息由下列四个值组成:
 //

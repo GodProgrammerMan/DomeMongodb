@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace WebApi.Areas.HelpPage
+namespace WebAPI.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {
@@ -19,6 +19,11 @@ namespace WebApi.Areas.HelpPage
                 "HelpPage_Default",
                 "Help/{action}/{apiId}",
                 new { controller = "Help", action = "Index", apiId = UrlParameter.Optional });
+
+            context.MapRoute(
+    "RobRoomSystem_Default",
+    "RobRoomSystem/{action}/{apiId}",
+    new { controller = "RobRoomSystem", action = "Index", apiId = UrlParameter.Optional });
 
             HelpPageConfig.Register(GlobalConfiguration.Configuration);
         }

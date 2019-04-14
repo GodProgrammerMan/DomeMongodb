@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace WebApi.Areas.HelpPage.ModelDescriptions
+namespace WebAPI
 {
     public class ComplexTypeModelDescription : ModelDescription
     {
@@ -8,6 +8,8 @@ namespace WebApi.Areas.HelpPage.ModelDescriptions
         {
             Properties = new Collection<ParameterDescription>();
         }
+
+        public bool IsAddDescription { get; set; }
 
         public Collection<ParameterDescription> Properties { get; private set; }
     }

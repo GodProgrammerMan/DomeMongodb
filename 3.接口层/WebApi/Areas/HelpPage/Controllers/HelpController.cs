@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection;
 using System.Web.Http;
 using System.Web.Mvc;
-using WebApi.Areas.HelpPage.ModelDescriptions;
-using WebApi.Areas.HelpPage.Models;
-
-namespace WebApi.Areas.HelpPage.Controllers
+using WebAPI;
+namespace WebAPI.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.
@@ -27,8 +29,12 @@ namespace WebApi.Areas.HelpPage.Controllers
 
         public ActionResult Index()
         {
+
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
-            return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
+            var config = Configuration.Services.GetApiExplorer().ApiDescriptions;
+
+            return View(config);
+
         }
 
         public ActionResult Api(string apiId)

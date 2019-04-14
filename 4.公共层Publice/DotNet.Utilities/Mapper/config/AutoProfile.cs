@@ -13,7 +13,7 @@ namespace DotNet.Utilities
     {
         public AutoProfile()
         {
-            var assemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>();
+            var assemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>().Where(t => t.FullName.Contains("Model")); //只注册dll名为Model的程序集 /.Where(t=>t.FullName.Contains("Model"))
             var types = assemblies.SelectMany(a => a.GetTypes());
 
             ConfigMap(types, typeof(IMapTo<>));

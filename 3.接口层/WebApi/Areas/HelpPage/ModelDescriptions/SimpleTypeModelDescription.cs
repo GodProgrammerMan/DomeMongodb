@@ -1,4 +1,4 @@
-namespace WebApi.Areas.HelpPage.ModelDescriptions
+namespace WebAPI 
 {
     public class SimpleTypeModelDescription : ModelDescription
     {
